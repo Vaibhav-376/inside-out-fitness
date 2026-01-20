@@ -177,12 +177,15 @@ export default function Home() {
             viewport={{ once: true }}
             className="overflow-hidden rounded-xl"
           >
-            <Image
-              src="/homepage/why1.jpeg"
-              alt="why us"
-              width={400}
-              height={400}
-              className="rounded-xl hover:scale-105 transition-transform duration-500"
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+              src="/videos/video5.mp4"
+  
+              // className="rounded-xl hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
 
@@ -225,12 +228,15 @@ export default function Home() {
             viewport={{ once: true }}
             className="overflow-hidden rounded-xl"
           >
-            <Image
-              src="/homepage/why2.jpeg"
-              alt="why us"
-              width={400}
-              height={400}
-              className="rounded-xl hover:scale-105 transition-transform duration-500"
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="h-full w-full object-cover"
+              src="/videos/video9.mp4"
+  
+              // className="rounded-xl hover:scale-105 transition-transform duration-500"
             />
           </motion.div>
 
@@ -338,12 +344,13 @@ export default function Home() {
             viewport={{ once: true }}
             className="relative h-125 md:h-150 w-full"
           >
-            <Image
-              src="/homepage/herosection.jpeg"
-              alt="inside out Workout"
-              fill
-              className="object-cover"
-              priority
+            <video
+              src="/videos/Promo_01.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="object-cover h-full w-full"
             />
           </motion.div>
 

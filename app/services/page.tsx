@@ -9,62 +9,62 @@ import { motion } from "framer-motion";
 const Services = () => {
     return (
         <div>
+ <section className="relative h-screen w-full overflow-hidden">
+      {/* Background Video */}
+      <motion.div
+        initial={{ scale: 1.15, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.4, ease: "easeOut" }}
+        className="absolute inset-0"
+      >
+        <video
+          src="/videos/Facilities_Drone.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="h-full w-full object-cover"
+        />
 
-            <section className="relative h-screen w-full">
-                <motion.div
-                    initial={{ scale: 1.15, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.4, ease: "easeOut" }}
-                    className="absolute inset-0"
-                >
-                    <Image
-                        src="/service/herosection-servicess.jpeg"
-                        alt="hero-section"
-                        fill
-                        priority
-                        className="object-cover"
-                    />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+      </motion.div>
 
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/40" />
-                </motion.div>
+      {/* Content */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 flex h-full items-center"
+      >
+        <div className="max-w-3xl px-6 md:px-16 text-white space-y-6">
+          <p className="uppercase tracking-widest text-sm font-semibold">
+            Sweat Dripping, Heart-Pumping Fun.
+          </p>
 
+          <h1 className="text-5xl md:text-7xl font-extrabold">
+            Inside Out Fitness WORKOUTS
+          </h1>
 
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ duration: 1 }}
-                    className="absolute inset-0 flex items-center"
-                >
-                    <div className="max-w-3xl px-6 md:px-16 text-white space-y-6">
-                        <p className="uppercase tracking-widest text-sm font-semibold">
-                            Sweat Dripping, Heart-Pumping Fun.
-                        </p>
+          <p className="text-base md:text-lg text-gray-200 leading-relaxed">
+            Elevate your workout routine today with Inside Out Fitness Training’s
+            extensive selection of innovative, ever-changing workouts. Get access
+            to over 5,000 curated Inside Out Fitness workouts and 45 unique Inside
+            Out Fitness classes designed to give you the results you're looking for.
+          </p>
 
-                        <h1 className="text-5xl md:text-7xl font-extrabold">
-                            Inside Out Fitness WORKOUTS
-                        </h1>
+          <div className="flex flex-wrap gap-4 pt-4">
+            <button className="bg-[#211551] hover:bg-orange-500 transition text-white px-8 py-3 rounded-full font-semibold">
+              Start A Trial
+            </button>
 
-                        <p className="text-base md:text-lg text-gray-200 leading-relaxed">
-                            Elevate your workout routine today with Inside Out Fitness Training’s extensive
-                            selection of innovative, ever-changing workouts. Get access to
-                            over 5,000 curated Inside Out Fitness workouts and 45 unique Inside Out Fitness
-                            classes designed to give you the results you're looking for.
-                        </p>
-
-                        <div className="flex flex-wrap gap-4 pt-4">
-                            <button className="bg-[#211551] hover:bg-orange-500 transition text-white px-8 py-3 rounded-full font-semibold">
-                                Start A Trial
-                            </button>
-
-                            <button className="border border-white hover:bg-white hover:text-black transition px-8 py-3 rounded-full font-semibold">
-                                Book A Class
-                            </button>
-                        </div>
-                    </div>
-                </motion.div>
-
-            </section>
+            <button className="border border-white hover:bg-white hover:text-black transition px-8 py-3 rounded-full font-semibold">
+              Book A Class
+            </button>
+          </div>
+        </div>
+      </motion.div>
+    </section>
 
             <section className="py-12">
 

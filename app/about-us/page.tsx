@@ -55,44 +55,44 @@ const AboutUs = () => {
             type: "image",
             src: "/aboutUs/9.jpeg",
         },
-        
+
         {
-            type: "image",
-            src: "/aboutUs/2.png"
+            type: "video",
+            src: "/videos/video3.mp4"
         },
         {
             type: "video",
             src: "/aboutUs/video2.mp4",
         },
         {
-            type: "image",
-            src: "/aboutUs/4.png"
+            type: "video",
+            src: "/videos/video4.mp4"
         },
-          {
+        {
             type: "video",
             src: "/aboutUs/video1.mp4"
         },
-          {
+        {
             type: "image",
             src: "/aboutUs/10.jpeg"
         },
-          {
-            type: "image",
-            src: "/aboutUs/6.png"
+        {
+            type: "video",
+            src: "/videos/video6.mp4"
         },
-          {
+        {
             type: "video",
             src: "/aboutUs/video4.mp4"
         },
-          {
-            type: "image",
-            src: "/aboutUs/7.png"
+        {
+            type: "video",
+            src: "/videos/video7.mp4"
         },
         //   {
         //     type: "image",
         //     src: "/aboutUs/8.png"
         // },
-          {
+        {
             type: "video",
             src: "/aboutUs/video3.mp4"
         },
@@ -112,46 +112,71 @@ const AboutUs = () => {
 
     return (
         <div>
-            <section className="bg-[#211551] text-white">
+            <section className="bg-[#211551] text-white overflow-hidden">
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
                     viewport={{ once: true }}
-                    className='relative'
+                    className="relative"
                 >
+                    <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-14">
 
-
-                    <div className="max-w-7xl mx-auto px-6 py-16 flex flex-col-reverse md:flex-row items-center gap-12">
+                     
                         <div className="w-full md:w-1/2">
-                            <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
-                                More than workouts
+                            <span className="inline-block mb-4 px-4 py-1 text-sm font-semibold rounded-full bg-white/10 text-gray-200">
+                                Inside Out Fitness
+                            </span>
+
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+                                More Than Workouts
                             </h1>
-                            <h2 className="text-3xl md:text-4xl font-bold mt-2">
-                                A Place to belong
+
+                            <h2 className="text-3xl md:text-4xl font-bold mt-3 text-indigo-300">
+                                A Place to Belong
                             </h2>
 
                             <p className="mt-6 text-base md:text-lg text-gray-200 leading-relaxed">
-                                At Inside Out Fitness, we are dedicated to helping you achieve your fitness goals in a supportive and motivating environment.
+                                At <span className="font-semibold text-white">Inside Out Fitness</span>, we believe fitness is not just about
+                                lifting weights — it’s about building confidence, discipline, and a lifestyle you love.
                             </p>
 
                             <p className="mt-4 text-base md:text-lg text-gray-200 leading-relaxed">
-                                Whether you're a beginner or a seasoned athlete, we offer a variety of classes and personalized training programs.
+                                Whether you're just starting your journey or pushing for peak performance, our expert coaches,
+                                personalized programs, and supportive community are here to guide you every step of the way.
                             </p>
+
+                     
+                            <div className="mt-8 flex gap-4">
+                                <button className="px-6 py-3 rounded-lg bg-indigo-500 hover:bg-indigo-600 transition font-semibold shadow-lg">
+                                    Start Your Journey
+                                </button>
+                                <button className="px-6 py-3 rounded-lg border border-white/30 hover:bg-white/10 transition font-semibold">
+                                    View Programs
+                                </button>
+                            </div>
                         </div>
 
-                        <div className="w-full md:w-1/2">
-                            <Image
-                                src="/aboutUs/aboutusHerosection.png"
-                                width={600}
-                                height={600}
-                                alt="Fitness Team"
-                                className="w-full h-auto rounded-xl shadow-xl"
-                            />
+         
+                        <div className="w-full md:w-3/4 aspect-auto relative">
+                            <div className="absolute inset-0 bg-indigo-500/20 rounded-xl blur-3xl -z-10" />
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                preload="auto"
+                                className="w-full h-full rounded-xl shadow-2xl border border-white/10"
+                            >
+                                <source src="/videos/Highlight_01.mp4" type="video/mp4" />
+                                Your browser does not support the video tag.Highlight_01
+                            </video>
                         </div>
+
                     </div>
                 </motion.div>
             </section>
+
 
 
             <section className="bg-[#fdfbf7] py-20 relative">
@@ -275,7 +300,7 @@ const AboutUs = () => {
                     className="w-full md:w-1/2"
                 >
                     <Image
-                        src="/aboutUs/coach.png"
+                        src="/homepage/trainer.png"
                         width={600}
                         height={600}
                         alt="Coach"
@@ -342,7 +367,10 @@ const AboutUs = () => {
                                 key={index}
                                 className={`relative overflow-hidden rounded-2xl group
             ${index === 0 ? "row-span-2" : ""}
-            ${index === 1 ? "col-span-2" : ""}
+            ${index === 1 ? "row-span-2 col-span-2" : ""}
+            ${index === 3 ? "row-span-2 col-span-2" : ""}
+            ${index === 9 ? "row-span-3 col-span-1" : ""}
+            ${index === 6 ? "row-span-2 col-span-2" : ""}
           `}
                             >
                                 {item.type === "image" ? (
