@@ -1,0 +1,11 @@
+services:
+  inside_out_fitness:
+    container_name: inside_out_fitness
+    platform: linux/amd64
+    build:
+      context: .
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "3004:3000"
