@@ -131,7 +131,7 @@ const LeadFormSection = () => {
                 <option value="WEIGHT_LOSS">Weight Loss</option>
                 <option value="MUSCLE_GAIN">Muscle Gain</option>
                 <option value="GENERAL_FITNESS">General Fitness</option>
-                <option value="STRENGTH_TRAINING">General Fitness</option>
+                <option value="STRENGTH_TRAINING">Strength Fitness</option>
               </select>
 
               <textarea
